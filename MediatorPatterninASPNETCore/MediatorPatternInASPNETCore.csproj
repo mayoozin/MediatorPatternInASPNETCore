@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <Folder Include="Features\Auth\" />
+    <Folder Include="Services\JWTToken\" />
   </ItemGroup>
 
 </Project>

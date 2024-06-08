@@ -7,6 +7,6 @@ namespace MediatorPatternInASPNETCore.Features.Auth
     [ApiController]
     public class AuthController : ControllerBase
     {
-            
+
     }
 }
