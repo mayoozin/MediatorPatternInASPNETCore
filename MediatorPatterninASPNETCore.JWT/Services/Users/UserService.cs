@@ -4,18 +4,19 @@ namespace MediatorPatterninASPNETCore.JWT.Services.Users;
 
 public class UserService : IUserService
 {
-    private readonly User _users;
-
     public async Task<UserDataModel> ValidateUserAsync(string username, string password)
     {
-        UserDataModel model = new UserDataModel();
-        if (_users.UserName == username)
+        UserDataModel model = new UserDataModel
         {
-            VerifyPassword(password, _users.Password);
+            UserName = "mayoo",
+            Password = "mayoo123"
+        };
+
+        if (model.UserName == username)
+        {
+            VerifyPassword(password, model.Password);
         }
 
-        model.UserName = username;
-        model.Password = password;
         return model;
     }
 
