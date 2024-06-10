@@ -16,7 +16,7 @@ public class AuthController : ControllerBase
     }
 
     [HttpPost("token")]
-    public async Task<IActionResult> GenerateToken([FromBody] LoginRequestModel requestModel)
+    public async Task<IActionResult> GenerateToken([FromBody] UserDataModel requestModel)
     {
         var user = await _userService.ValidateUserAsync(requestModel.UserName, requestModel.Password);
         if (user is null) return Unauthorized("You are not authorized.");
